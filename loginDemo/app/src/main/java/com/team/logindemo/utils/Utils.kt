@@ -58,6 +58,9 @@ object Utils {
             return false
         }
     }
+    fun saveTextBySp():Boolean {
+        return true
+    }
     /**
      * 读取文件
      */
