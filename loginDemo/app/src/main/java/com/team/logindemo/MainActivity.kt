@@ -1,7 +1,9 @@
 package com.team.logindemo
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -23,8 +25,20 @@ class MainActivity : AppCompatActivity() {
 
         val sp = getSharedPreferences("info", Context.MODE_PRIVATE)
 
+
+        Thread(Runnable {
+            kotlin.run {
+                val currentTime = Utils.getSuningTime()
+                Log.d("+++++++++++++++","onCreate:$currentTime")
+            }
+        }).start()
         // 设置点击事件
         bt_login.setOnClickListener(MyListener())
+        bt_buy.setOnClickListener{
+            startWeb("http://www.team520.com/")
+        }
+
+
         val isSave = sp.getBoolean("is_save", false)
         if (isSave) {
             et_username.setText(sp.getString("username", ""))
@@ -61,6 +75,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+    fun startWeb(url: String) {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
     }
     inner class MyListener: View.OnClickListener{
         override fun onClick(v: View?) {

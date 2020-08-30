@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.DatabaseErrorHandler
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 /**
  * @author: Administrator
@@ -25,11 +26,19 @@ class MyOpenHelper(
      * 数据库第一次创建的时候,会调用这个方法,一般做表结构创建和数据初始化
      */
     override fun onCreate(db: SQLiteDatabase?) {
-         db?.execSQL("")
+        db?.execSQL("CREATE TABLE info (_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,name VARCHAR(20),phone VARCHAR(20));")
+        db?.execSQL("INSERT INTO \"main\".\"info\"(\"_id\", \"name\", \"phone\") VALUES (1, 'fwr', '15131234212');")
+
+        Log.d("SQLITE","onCreate:被调用")
     }
 
+    // 升级
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+
     }
 
+    // 降级
+    override fun onDowngrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+
+    }
 }

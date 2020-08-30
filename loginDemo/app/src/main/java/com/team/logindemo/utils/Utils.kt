@@ -2,13 +2,23 @@ package com.team.logindemo.utils
 
 import android.content.Context
 import android.os.Environment
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.io.*
-
+import java.net.URL
+data class SuningTime(val sysTime1: String, val sysTime2: String)
 /**
  * 工具类
  */
 object Utils {
 
+    fun getSuningTime(): String {
+        val infoUrl = "http://quan.suning.com/getSysTime.do"
+        val result = URL(infoUrl).readText()
+        val gson = Gson()
+        val suningtime = gson.fromJson<SuningTime>(result, object : TypeToken<SuningTime>() {}.type)
+        return suningtime.sysTime2
+    }
     /**
      * 保存文本到文件里
      * @param text 文本1
