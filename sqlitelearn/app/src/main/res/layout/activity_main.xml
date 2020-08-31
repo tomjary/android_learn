@@ -28,6 +28,32 @@
         android:text="查看"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E91E63"/>
+
+    <Button
+        android:id="@+id/bt_insert2"
+        android:text="增加2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_delete2"
+        android:text="删除2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_update2"
+        android:text="修改2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_select2"
+        android:text="查看2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
