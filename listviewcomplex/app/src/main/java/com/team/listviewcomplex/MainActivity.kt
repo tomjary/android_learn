@@ -18,14 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         // lv_list.adapter = MyAdapter()
         val arrayAdapter = ArrayAdapter(this, R.layout.item2,
-            arrayOf(
-                "我是第一个",
-                "我是第二个",
-                "我是第三个",
-                "我是第四个",
-                "我是第五个"
-            ))
-        lv_list.adapter = arrayAdapter
+            arrayOf("我是第一个", "我是第二个", "我是第三个", "我是第四个", "我是第五个"))
+        val arrayAdapter2 = ArrayAdapter(this, R.layout.item3, R.id.tv_text,
+            arrayOf("我是第一个", "我是第二个", "我是第三个", "我是第四个", "我是第五个"))
+        lv_list.adapter = arrayAdapter2
 
     }
 
