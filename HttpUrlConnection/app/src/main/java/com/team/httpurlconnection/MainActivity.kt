@@ -48,8 +48,7 @@ class MainActivity : AppCompatActivity() {
                     username = et_username.text.toString()
                     password = et_password.text.toString()
                     // 如果提交的参数包含中文,必须先url编码
-                    // val tempUrl = loginUrl + "?username=${username}&password=${password}"
-                    val params = "username=$username&password=$password"
+                    val params = "username="+ URLEncoder.encode(username,"utf-8") +"&password=" + URLEncoder.encode(password,"utf-8")
                     val url = URL(loginUrl)
                     val connection: HttpURLConnection = url.openConnection() as HttpURLConnection
                     connection.requestMethod = "POST"

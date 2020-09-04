@@ -16,7 +16,7 @@ object Utils {
         val baso = ByteArrayOutputStream()
         var len = -1
         val buffer = ByteArray(1024)
-        while (inputStream.read(buffer).also({ len = it }) != -1) {
+        while (inputStream.read(buffer).also { len = it } != -1) {
             baso.write(buffer, 0, len)
         }
         inputStream.close()
