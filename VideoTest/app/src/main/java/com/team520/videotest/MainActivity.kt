@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 //        player.setUrl("https://joyexpress.oss-cn-hangzhou.aliyuncs.com/C0040S03_1.mp4")
         val controller = StandardVideoController(this)
         controller.addDefaultControlComponent("临时标题", false)
+        //在LogCat显示调试信息
+        controller.addControlComponent(PlayerMonitor())
         player.setVideoController(controller) //设置控制器
         player.start() //开始播放，不调用则不自动播放
     }
