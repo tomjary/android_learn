@@ -9,7 +9,7 @@ import android.util.Log
  * @author: Administrator
  * @date: 2020/9/7 19:10
  */
-class DailReceiver: BroadcastReceiver() {
+class DaileReceiver: BroadcastReceiver() {
     override fun onReceive(content: Context?, intent: Intent?) {
         val sp = content?.getSharedPreferences("info", Context.MODE_PRIVATE)
         val pre = sp?.getString("pre", "17951")

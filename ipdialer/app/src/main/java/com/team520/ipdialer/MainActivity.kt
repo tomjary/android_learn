@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             }
             edit.putString("pre", pre)
             edit.apply()
+            toast("设置成功")
         }
 
 
