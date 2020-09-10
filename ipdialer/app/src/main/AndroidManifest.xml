@@ -55,6 +55,25 @@
             </intent-filter>
         </receiver>
 
+        <!-- 接受有序广播1-->
+        <receiver android:name=".State1Receiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.team520.sendrice"/>
+            </intent-filter>
+        </receiver>
+        <!-- 接受有序广播2-->
+        <receiver android:name=".State2Receiver">
+            <intent-filter android:priority="800">
+                <action android:name="com.team520.sendrice"/>
+            </intent-filter>
+        </receiver>
+        <!-- 接受有序广播3-->
+        <receiver android:name=".State3Receiver">
+            <intent-filter android:priority="600">
+                <action android:name="com.team520.sendrice"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

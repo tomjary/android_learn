@@ -18,4 +18,15 @@
         android:layout_height="wrap_content"
         android:text="设置" />
 
+    <Button
+        android:id="@+id/btn_sendbroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送无序广播" />
+
+    <Button
+        android:id="@+id/btn_sendorderedbroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播" />
 </LinearLayout>
