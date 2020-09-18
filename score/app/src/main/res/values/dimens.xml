@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_team_text_size">24sp</dimen>
+    <dimen name="tv_score_text_size">90sp</dimen>
+    <dimen name="btn_add_text_size">30sp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score</string>
+    <string name="tv_left">Team A</string>
+    <string name="tv_right">Team B</string>
+    <string name="btn_add_1">+1</string>
+    <string name="btn_add_2">+2</string>
+    <string name="btn_add_3">+3</string>
+    <string name="undoBtn">undo</string>
+    <string name="refreshBtn">refresh</string>
+</resources>
